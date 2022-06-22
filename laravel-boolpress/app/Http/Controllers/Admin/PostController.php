@@ -32,4 +32,16 @@ class PostController extends Controller
 
         return rederict()->route('admin.posts.index');
     }
+
+    public function edit(Post $post){
+        return view('admin.posts.edit',compact('post'));
+    }
+
+    public function update(Request $request, Post $post){
+        $data = $request->all();
+        $post['slug'] = Str::slug($request->title,'-');
+        $post->update($data);
+
+        return redirect()->route('admin.posts.index',$post);
+    }
 }

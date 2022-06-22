@@ -13,6 +13,9 @@
                 <div>
                     <a href="{{route('admin.posts.create')}}">Create a new post</a>
                 </div>
+                <div>
+                    <a href="{{route('admin.posts.edit',$post->id)}}">Edit the Post</a>
+                </div>
             </div>
             @endforeach
         </div>
