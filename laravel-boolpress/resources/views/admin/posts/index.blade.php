@@ -10,6 +10,9 @@
                 <div>
                     <a href="{{route('admin.posts.show',$post->id)}}">View</a>
                 </div>
+                <div>
+                    <a href="{{route('admin.posts.create')}}">Create a new post</a>
+                </div>
             </div>
             @endforeach
         </div>
